@@ -1,0 +1,82 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import "~bulma/sass/utilities/_all";
+@import "variables";
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+
+.navbar {
+  background-color: $primary;
+  @include desktop {
+    .navbar-link,
+    :not(.navbar-dropdown) > .navbar-item {
+      color: white;
+    }
+  }
+
+  .navbar-brand > .navbar-item {
+    color: white;
+  }
+}
+
+.navbar-burger > span {
+  color: white;
+}
+
+.page-content {
+  min-height: 55vh;
+  @include mobile {
+    min-height: 34vh;
+  }
+}
+
+.navbar-logo {
+  position: absolute;
+  min-width: 80px;
+  min-height: 80px;
+  top: .2rem;
+  left: -2.2rem;
+}
+
+.shadowed {
+  -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
+  filter: url(#drop-shadow);
+  -ms-filter:  "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+  filter:  "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+
+.container-small {
+  max-width: 50vw;
+  @extend .container;
+}
+
+.section:only-child {
+  min-height: 60vh;
+}
+
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+/* .slide-fade-leave-active below version 2.1.8 */
+.slide-fade-enter,
+.slide-fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.welcome {
+  .page-title {
+    background-color: black;
+  }
+
+  .for-who {}
+
+  .counter {
+    background-color: black;
+  }
+}
