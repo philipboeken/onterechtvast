@@ -5,6 +5,7 @@
 // Import Bulma and Buefy styles
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
+@import "hexagons";
 
 .navbar {
   background-color: $primary;
@@ -24,13 +25,6 @@
   color: white;
 }
 
-.page-content {
-  min-height: 55vh;
-  @include mobile {
-    min-height: 34vh;
-  }
-}
-
 .navbar-logo {
   position: absolute;
   min-width: 80px;
@@ -47,12 +41,18 @@
 }
 
 .container-small {
-  max-width: 50vw;
+  @include desktop {
+    max-width: 50vw;
+  }
   @extend .container;
 }
 
-.section:only-child {
-  min-height: 60vh;
+.content {
+  min-height: 68vh;
+}
+
+.welcome-background {
+  min-width: 100vw;
 }
 
 .slide-fade-enter-active {
@@ -69,14 +69,32 @@
   opacity: 0;
 }
 
+.intro {
+  position: absolute;
+  top: 217px;
+  left: 83px;
+  color: white;
+  font-size: 100px;
+}
+
+.intro-carousel {
+  position: absolute !important;
+  @include desktop {
+    top: 345px;
+    left: 83px;
+    font-size: 100px;
+  }
+  @include touch {
+    top: 140px;
+    left: 69px;
+    font-size: 50px;
+  }
+  color: white;
+  width: 720px;
+}
+
 .welcome {
   .page-title {
-    background-color: black;
-  }
-
-  .for-who {}
-
-  .counter {
     background-color: black;
   }
 }

@@ -1,9 +1,5 @@
 @extends('app')
 
-@section('title')
-	Veel gestelde vragen
-@endsection
-
 @section('content')
-
+<section class="section"></section>
 @endsection

@@ -1,9 +1,5 @@
 @extends('app')
 
-@section('title')
-	Contact
-@endsection
-
 @section('content')
-
+<section class="section"></section>
 @endsection

@@ -1,9 +1,6 @@
 @extends('app')
-
-@section('title')
-	Hoe werkt het?
-@endsection
-
 @section('content')
+<section class="section">
 
+</section>
 @endsection

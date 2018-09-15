@@ -1,0 +1,50 @@
+.hexGrid {
+  position: absolute;
+  right: 450px;
+  top: 320px;
+  color: white;
+}
+
+.hexagon {
+  background: url("hexagon-transp-25.png") no-repeat;
+  background-size: 180px 180px;
+  min-width: 170px;
+  min-height: 170px;
+  @extend .has-text-centered;
+
+  .counter1 {
+    position: absolute;
+    top: 65px;
+    width: 100px;
+    left: 40px;
+  }
+
+  .counter2 {
+    position: absolute;
+    top: 77px;
+    width: 100px;
+    left: 40px;
+  }
+
+  .counter3 {
+    position: absolute;
+    top: 55px;
+    width: 100px;
+    left: 40px;
+  }
+}
+
+.hex1 {
+  position: absolute;
+}
+
+.hex2 {
+  position: absolute;
+  left: 160px;
+}
+
+.hex3 {
+  position: absolute;
+  top: 136px;
+  left: 80px;
+}

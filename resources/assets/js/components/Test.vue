@@ -1,5 +1,5 @@
 <template>
-    <div class="container-small-section">
+    <div class="container-small">
         <transition name="slide-fade">
             <div v-if="this.current == 'q1'">
                 <div class="title">Ben je als verdachte vastgehouden door de politie?</div>
@@ -180,32 +180,36 @@
                 </div>
             </div>
             <div v-if="this.current == 'q7'">
-                <div class="title"> Wanneer ben je opgepakt, en wanneer ben je vrijgelaten?
-                </div>
+                <div class="title"> Wanneer ben je opgepakt, en wanneer ben je vrijgelaten?</div>
                 <div class="is-italic"> van 12 tot 9 telt niet, vanaf 6 uur krijgen ze schadevergoeding</div>
                 <b-field label="Van">
-                    <b-datepicker></b-datepicker>
-                    <b-timepicker></b-timepicker>
+                    <b-field>
+                        <b-datepicker v-model="q7vandate"></b-datepicker>
+                        <b-timepicker v-model="q7vantime"></b-timepicker>
+                    </b-field>
                 </b-field>
                 <b-field label="Tot">
-                    <b-datepicker></b-datepicker>
-                    <b-timepicker></b-timepicker>
+                    <b-field>
+                        <b-datepicker v-model="q7totdate"></b-datepicker>
+                        <b-timepicker v-model="q7tottime"></b-timepicker>
+                    </b-field>
                 </b-field>
                 <button class="button is-link"
                         @click="prev()">Vorige</button>
                 <button class="button is-primary is-outlined is-pulled-right"
                         @click="next('q7')">Volgende</button>
             </div>
-            <div v-if="this.current == 'q7y'">
+            <div v-if="this.current == 'q7y'"
+                 class="has-text-centered">
                 <div class="title">
                     Moneyssssssss$$$$$$$$$$$$$$$$$$$$$
                 </div>
                 <div class="title has-text-centered">
                     €120,- !!!
                 </div>
-                <div class="has-text-centered">
+                <p>
                     Bekijk hier hoe wij u kunnen helpen om dit terug te krijgen.
-                </div>
+                </p>
                 <a href="/overzicht"
                    class="button">Klik hier!</a>
             </div>
@@ -217,7 +221,9 @@
     import countTo from "vue-count-to";
     import Vue from "vue";
     export default {
-      components: { countTo },
+      components: {
+        countTo
+      },
       data() {
         return {
           q1: "",
@@ -226,9 +232,14 @@
           q4: "",
           q5: "",
           q6: "",
-          q7van: "",
-          q7tot: "",
-          pages: ["q1"]
+          q7vandate: null,
+          q7vantime: new Date(),
+          q7totdate: null,
+          q7tottime: new Date(),
+          pages: ["q7"],
+          options: {
+            format: "DD/MM/YYYY mm:hh"
+          }
         };
       },
       computed: {
@@ -303,6 +314,7 @@
                   break;
               }
             case "q7":
+              Vue.set(this.pages, this.pages.length, "q7y");
               switch (this.q7) {
                 case "y":
                   Vue.set(this.pages, this.pages.length, "q7y");

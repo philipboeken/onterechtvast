@@ -1,26 +1,29 @@
 <template>
-    <div class="hexGrid">
-        <div class="hexagon hex1">
-            <span class="counter1">
+    <div class="level is-mobile has-text-centered">
+        <div class="level-item">
+            <p>
                 <countTo :startVal="1"
                          :endVal="cases"
-                         :duration='6000'></countTo> zaken aangemeld
-            </span>
+                         :duration='6000'></countTo>
+                <br/> zaken aangemeld
+            </p>
         </div>
-        <div class="hexagon hex2">
-            <span class="counter2">
+        <div class="level-item">
+            <p>
                 <countTo :startVal="1"
                          :endVal="success"
-                         :duration='6000'></countTo>% succes
-            </span>
+                         :duration='6000'></countTo>%
+                <br /> succes
+            </p>
         </div>
-        <div class="hexagon hex3">
-            <span class="counter3">
+        <div class="level-item">
+            <p>
                 €
                 <countTo :startVal="1"
                          :endVal="averageClaim"
-                         :duration='6000'></countTo>,- gemiddelde schadeclaim
-            </span>
+                         :duration='6000'></countTo>,-
+                <br /> gemiddelde schadeclaim
+            </p>
         </div>
     </div>
 </template>

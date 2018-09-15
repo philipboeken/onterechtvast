@@ -1,16 +1,35 @@
 @extends('app')
 @section('content')
 <div class="welcome">
+    <div>
+        <img src="img/Home-back.png" alt="" class="welcome-background">
+        <span class="intro is-hidden-touch">WIJ ZIJN</span>
+        <carousel class="intro-carousel" :autoplay="{{ json_encode(true) }}" :per-page="1"
+            :loop="{{ json_encode(true) }}" :pagination-enabled="{{ json_encode(false) }}" :autoplay-hover-pause="{{ json_encode(false) }}" :autoplay-timeout="4000">
+            <slide>
+                Onterechtvast.nl
+            </slide>
+            <slide>
+                Geweldig
+            </slide>
+        </carousel>
+        <counter class="is-hidden-touch"></counter>
+        <hr class="is-hidden-desktop">
+        <mobile-counter class="is-hidden-desktop"></mobile-counter>
+        <hr class="is-hidden-desktop">
+    </div>
     <section class="section for-who has-text-centered">
         <div class="title">
             Voor wie?
         </div>
         <div class="container-small">
-                De service en online portal van onterechtvast.nl zijn er volledig op gericht om jou te helpen in het claimen waar je recht op hebt! Van begin tot eind heb je duidelijkheid over alle stappen die je zelf moet ondernemen. Door onze ervaring kunnen wij samen jouw schadevergoeding claimen.
+            De service en online portal van onterechtvast.nl zijn er volledig op gericht om jou te helpen in het claimen waar je recht
+            op hebt! Van begin tot eind heb je duidelijkheid over alle stappen die je zelf moet ondernemen. Door onze ervaring
+            kunnen wij samen jouw schadevergoeding claimen.
         </div>
     </section>
     <hr>
-    <section class="section for-who">
+    <div class="section for-who">
         <div class="title has-text-centered">
             Wie zijn wij?
         </div>
@@ -47,13 +66,13 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
     <hr>
     <section class="section has-text-centered">
         <div class="title">
             Deze mensen gingen u voor:
         </div>
-        <carousel :autoplay="{{ json_encode(true) }}" :per-page="1" :navigation-enables="{{ json_encode(true) }}" :loop="{{ json_encode(true) }}"
+        <carousel :autoplay="{{ json_encode(true) }}" :per-page="1" :loop="{{ json_encode(true) }}"
             :autoplay-timeout="5000">
             <slide>
                 <div class="container-small">
@@ -104,14 +123,11 @@
             </ul>
         </div>
     </section>
-    <section class="section counter has-text-white">
-        <counter></counter>
-    </section>
+    <hr>
     <section class="section has-text-centered">
         <div class="title">Is dit iets voor jou?
         </div>
-        <div class="subtitle">Doe nu de test!</div>
-        <a class="button is-outlines" href="{{ route('test') }}">Doe de test!</a>
+        <a class="button is-outlines" href="{{ route('test') }}">Doe nu de test!</a>
     </section>
 </div>
 @endsection

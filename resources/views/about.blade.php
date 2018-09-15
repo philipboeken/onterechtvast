@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+<section class="section">
 	We zijn vier leuke jongens uit de streek van Bloemendaal
 	Misschien kent jouw vader mijn vader wel,
 	Of zit 'ie onder modaal?
@@ -63,4 +64,5 @@
 	Super mooi
 	Super groot
 	Facking duur
+</section>
 @endsection

@@ -9,11 +9,11 @@
     </div>
 </section>
 <hr>
-<section class="section has-text-centered">
-    <div class="title">
+<section class="section">
+    <div class="title has-text-centered">
         Wat je krijgt
     </div>
-    <div>
+    <div class="container-small">
         <ul>
             <li>Een portal</li>
             <li>Hulp</li>
@@ -24,11 +24,7 @@
 <hr>
 <section class="section has-text-centered">
     <div class="title">Wat het kost</div>
-    kk veel geld, nee iegenlijk niet, maar 19% terwijl wij helemaal niks eraan doen! hahahasukkels
-</section>
-<section class="section">
-    <div class="justify-content-center">
-        <a href="/register" class="button is-centered">Koop die shit</a>
-    </div>
+    <p>Geld</p>
+    <a href="/register" class="button is-centered">Koop het</a>
 </section>
 @endsection

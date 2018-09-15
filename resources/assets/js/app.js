@@ -9,9 +9,9 @@ require('./fontawesome-all');
 // require('es6-object-assign').polyfill();
 require('./bootstrap');
 require('es6-promise').polyfill();
-require('trix');import Vue from 'vue';
+require('trix');
 
-
+import Vue from 'vue';
 window.Vue = require('vue');
 import Buefy from 'buefy';
 
@@ -29,6 +29,7 @@ Vue.use(Buefy, {
 
 Vue.component('account-menu', require('./components/AccountMenu.vue'));
 Vue.component('counter', require('./components/Counter.vue'));
+Vue.component('mobile-counter', require('./components/MobileCounter.vue'));
 Vue.component('datepicker', require('./components/Datepicker.vue'));
 Vue.component('payment-method', require('./components/PaymentMethod.vue'));
 Vue.component('test', require('./components/Test.vue'));

@@ -488,7 +488,8 @@ table th {
   }
 }
 
-.has-text-centered {
+.has-text-centered,
+.hexagon {
   text-align: center !important;
 }
 
@@ -14250,6 +14251,56 @@ label.panel-block:hover {
   background: rgba(64, 153, 255, 0.05);
 }
 
+.hexGrid {
+  position: absolute;
+  right: 450px;
+  top: 320px;
+  color: white;
+}
+
+.hexagon {
+  background: url(/images/hexagon-transp-25.png?ceaa3d210677ea2089f724ec22ce94ea) no-repeat;
+  background-size: 180px 180px;
+  min-width: 170px;
+  min-height: 170px;
+}
+
+.hexagon .counter1 {
+  position: absolute;
+  top: 65px;
+  width: 100px;
+  left: 40px;
+}
+
+.hexagon .counter2 {
+  position: absolute;
+  top: 77px;
+  width: 100px;
+  left: 40px;
+}
+
+.hexagon .counter3 {
+  position: absolute;
+  top: 55px;
+  width: 100px;
+  left: 40px;
+}
+
+.hex1 {
+  position: absolute;
+}
+
+.hex2 {
+  position: absolute;
+  left: 160px;
+}
+
+.hex3 {
+  position: absolute;
+  top: 136px;
+  left: 80px;
+}
+
 .navbar {
   background-color: #E18A07;
 }
@@ -14269,16 +14320,6 @@ label.panel-block:hover {
   color: white;
 }
 
-.page-content {
-  min-height: 55vh;
-}
-
-@media screen and (max-width: 768px) {
-  .page-content {
-    min-height: 34vh;
-  }
-}
-
 .navbar-logo {
   position: absolute;
   min-width: 80px;
@@ -14294,12 +14335,18 @@ label.panel-block:hover {
   filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
 }
 
-.container-small {
-  max-width: 50vw;
+@media screen and (min-width: 1024px) {
+  .container-small {
+    max-width: 50vw;
+  }
 }
 
-.section:only-child {
-  min-height: 60vh;
+.content {
+  min-height: 68vh;
+}
+
+.welcome-background {
+  min-width: 100vw;
 }
 
 .slide-fade-enter-active {
@@ -14321,11 +14368,37 @@ label.panel-block:hover {
   opacity: 0;
 }
 
-.welcome .page-title {
-  background-color: black;
+.intro {
+  position: absolute;
+  top: 217px;
+  left: 83px;
+  color: white;
+  font-size: 100px;
 }
 
-.welcome .counter {
+.intro-carousel {
+  position: absolute !important;
+  color: white;
+  width: 720px;
+}
+
+@media screen and (min-width: 1024px) {
+  .intro-carousel {
+    top: 345px;
+    left: 83px;
+    font-size: 100px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .intro-carousel {
+    top: 140px;
+    left: 69px;
+    font-size: 50px;
+  }
+}
+
+.welcome .page-title {
   background-color: black;
 }
 

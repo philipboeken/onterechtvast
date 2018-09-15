@@ -1,5 +1,5 @@
-@extends('layouts.center')
-@section('content-mid')
+@extends('app')
+@section('content')
 
 <section class="section">
 	<div class="title has-text-centered">

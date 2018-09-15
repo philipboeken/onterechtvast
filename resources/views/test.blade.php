@@ -1,6 +1,6 @@
 @extends('app')
 @section('content')
-<div class="section">
+<section class="section">
     <test></test>
-</div>
+</section>
 @endsection

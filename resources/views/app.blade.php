@@ -19,7 +19,9 @@
             @include('navigation')
         {{-- @endif --}}
         @yield('form_start')
-        @yield('content')
+        <div class="content">
+            @yield('content')
+        </div>
         @yield('form_end')
         @include('footer')
     </div>
