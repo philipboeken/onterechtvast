@@ -24,7 +24,7 @@
         "@fortawesome/free-solid-svg-icons": "^5.3.1",
         "@fortawesome/vue-fontawesome": "^0.1.1",
         "bootstrap": "^4.0.0",
-        "buefy": "^0.6.3",
+        "buefy": "^0.7.2",
         "bulma": "^0.6.*",
         "es6-object-assign": "^1.1.0",
         "es6-promise": "^4.2.4",
